@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/details-more.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+
+    <script type="module"  src="script.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="add-task-container">            
+            <i class="gg-details-more"></i>                
+            <label for="todo"></label>
+            <input type="text" id="todo" name="todo" placeholder="Add a new task" class="task-input" autocomplete="off">
+        </div>
+        <div class="todo-status">
+            <div class="status-container">
+                <a href="#" class="hover-link" id="All-Todo"><span class="status">All</span></a>
+                <a href="#" class="hover-link" id="Pending-Todo"><span class="status">Pending</span></a>
+                <a href="#" class="hover-link" id="Completed-Todo"><span class="status">Completed</span></a>
+            </div>
+
+            <!-- <button class="clear-all">Clear All</button> -->
+        </div>
+
+        <div class="todo-list">
+            <div data-list-id="1" class="list-element" id="list__element_1">
+                <div class="checkbox-container">                    
+                    <input type="checkbox"  class="todo-checkbox">
+                    <label for="check-todo" class="todo-label"></label>
+                </div>
+                <div class="todo-task">
+                    <span class="todo-text ">todo1</span>
+                    <input type="text" style="width: 100%;" class="hidden">
+                </div>
+                <div class="todo-options-container">
+                    ...
+                    <div class="todo-options hidden ">
+                        <button class="options-button edit hover-link">edit</button>
+                        <button class="options-button delete hover-link">delete</button>
+                    </div>
+                </div>
+            </div>
+            <div data-list-id="1" class="list-element" id="list__element_1">
+                <div class="checkbox-container">                    
+                    <input type="checkbox"  class="todo-checkbox">
+                    <label for="check-todo" class="todo-label"></label>
+                </div>
+                <div class="todo-task">
+                    <span class="todo-text ">todo2</span>
+                    <input type="text" style="width: 100%;" class="hidden">
+                </div>
+                <div class="todo-options-container">
+                    ...
+                    <div class="todo-options hidden ">
+                        <button class="options-button edit hover-link">edit</button>
+                        <button class="options-button delete hover-link">delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

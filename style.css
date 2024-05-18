@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #main{
+    position: absolute;
+
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+
+    display: inline-block;
+    background-color:aquamarine;
+} */
+
+body{
+    /* background: linear-gradient(90deg, rgba(66,197,207,1) 0%, rgba(34,98,223,1) 100%); */
+    background: -webkit-linear-gradient(0deg, rgba(66,197,207,1) 0%, rgba(34,98,223,1) 100%);
+    height: 100vh;
+}
+
+#main{
+    position: absolute;
+    
+    height: 30rem;
+    width: 20rem;
+
+    top: 50%;
+    left: 10%;
+
+    transform: translate(-10%, -50%);
+
+    display: inline-block;
+    /* background-color: whitesmoke; */
+    background-color: rgb(234, 228, 228);
+    padding: 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.32) 0px 3px 24px;
+    border-radius: 10px;
+}
+
+.add-task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid;
+    border-radius: 5px;
+
+    margin: 1rem;    
+    height: 3rem;
+
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 24px; */
+    box-shadow: 0px 5px 10px rgba(0,0,0,.35);
+    background-color: white;
+}
+
+.task-input, .task-input:focus{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.task-input::placeholder{
+    color:darkslategray;
+    opacity: 0.5;
+    font-size: 1rem;
+
+}
+
+.todo-status{
+    display: flex;
+    /* background-color: chocolate;     */
+    align-items: center;
+    /* display: flex; */
+    height: 3rem;
+    
+}
+
+.hover-link:visited, .hover-link{
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: color .1s;
+
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hover-link::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    top: 20px;
+    width: 0;
+    transform: translateX(-50%);
+    background-color: rgb(17, 120, 215);
+    transition: width .3s ;
+}
+
+.hover-link:hover::after{
+    width: 100%;
+}
+
+.hover-link:hover{
+    color: rgb(17, 120, 215);    
+}
+
+.status-container{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .status{
+    margin: 0 0 0 15px
+}    */
+
+.clear-all{
+    margin-left: auto;
+    order: 2;    
+}
+
+
+/* .todo-list{
+    background-color: RED
+    border: 1px solid;
+} */
+
+.list-element{
+    display: grid;
+    position: relative;
+    grid-template-columns: 2.2fr 9fr 1fr;
+    /* grid-template-rows: 10px 60px; */
+
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding: 5px;
+    
+    justify-content: center;
+}
+
+.list-element::after{
+    content: "";
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    transform: translateX(-50%);
+}
+
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.todo-task{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* text-decoration-line: line-through ; */
+}
+
+.todo-task:checked{
+    background: red;
+}
+
+.todo-options-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: large;
+    font-weight: 900;
+    cursor:pointer;
+}
+
+.todo-options{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 120%;
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    background-color: bisque;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.35);
+
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.options-button{
+    background: none;
+    border: none;
+    font-size:medium;
+    font-weight: bold;
+    text-transform: capitalize;    
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
